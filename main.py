@@ -1,0 +1,12 @@
+import requests
+import pandas as pd
+
+
+url = "https://randomuser.me/api/?results=500"
+response = requests.get(url)
+
+if response.status_code == 200:
+    print("it works")
+    data = response.json()
+else:
+    print("smth went wrong", response.status_code)
