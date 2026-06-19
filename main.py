@@ -8,5 +8,7 @@ response = requests.get(url)
 if response.status_code == 200:
     print("it works")
     data = response.json()
+    users_list = data['results']
 else:
     print("smth went wrong", response.status_code)
+
