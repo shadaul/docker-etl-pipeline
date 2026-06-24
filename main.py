@@ -10,7 +10,7 @@ if response.status_code == 200:
     data = response.json()
     users_list = data['results']
     df = pd.DataFrame(users_list)
-    print(df.head(['name']))
+    print(df.head())
 else:
     print("smth went wrong", response.status_code)
 
